@@ -1,0 +1,36 @@
+{
+  "name": "webdriverio-course-content",
+  "version": "1.0.0",
+  "description": "WebdriverIO Course Content (examples, exercises and sample site)",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server sample-site -p 8303",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-start": "./node_modules/.bin/wdio",
+    "test-single": "npm run test-start -- --spec=test/cart.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klamping/webdriverio-course-content.git"
+  },
+  "author": "Kevin Lamping",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klamping/webdriverio-course-content/issues"
+  },
+  "homepage": "https://github.com/klamping/webdriverio-course-content#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "http-server": "^0.9.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "node-notifier": "^5.2.1",
+    "onchange": "^3.3.0",
+    "selenium-standalone": "^6.13.0",
+    "sync-request": "^6.0.0",
+    "wdio-mocha-framework": "^0.5.13",
+    "wdio-selenium-standalone-service": "0.0.10",
+    "webdriverio": "^4.12.0"
+  }
+}
