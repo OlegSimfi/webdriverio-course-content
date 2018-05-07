@@ -1,3 +1,4 @@
+require('chai').should();
 
 describe("Shop CTA Button", function () {
     it("should link to the product page", function () {

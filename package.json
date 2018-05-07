@@ -7,7 +7,7 @@
     "start": "http-server sample-site -p 8303",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test-start": "./node_modules/.bin/wdio",
-    "test-single": "npm run test-start -- --spec=test/cart.js"
+    "test-single": "npm run test-start -- --spec=test/review.js"
   },
   "repository": {
     "type": "git",
