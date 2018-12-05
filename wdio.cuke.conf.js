@@ -110,14 +110,7 @@ exports.config = {
     // before running any tests.
     framework: 'cucumber',
     cucumberOpts: {
-        require: [
-            './test/steps/given.js',
-            './test/steps/then.js',
-            './test/steps/when.js',
-        ],
-        compiler: [
-            'js:babel-register',
-        ],
+        require: require('glob').sync('./test/steps/*.js'),
         timeout: timeout
     },
     //

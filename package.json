@@ -20,24 +20,23 @@
     "url": "https://github.com/klamping/webdriverio-course-content/issues"
   },
   "homepage": "https://github.com/klamping/webdriverio-course-content#readme",
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "~6.26.3",
     "babel-jest": "~23.0.1",
     "babel-polyfill": "~6.26.0",
     "babel-preset-env": "~1.7.0",
     "babel-register": "~6.26.0",
-    "http-server": "^0.9.0",
-    "wdio-cucumber-framework": "1.0.2",
     "chai": "^3.5.0",
+    "globe": "^0.3.0",
+    "http-server": "^0.9.0",
     "node-notifier": "^4.6.1",
     "onchange": "^3.2.0",
     "selenium-standalone": "^6.15.4",
     "sync-request": "^3.0.1",
     "wdio-allure-reporter": "^0.1.2",
     "wdio-browserstack-service": "^0.1.4",
+    "wdio-cucumber-framework": "1.0.2",
     "wdio-dot-reporter": "0.0.5",
     "wdio-junit-reporter": "^0.3.0",
     "wdio-mocha-framework": "^0.5.8",

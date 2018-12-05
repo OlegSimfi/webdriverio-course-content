@@ -3,12 +3,11 @@ Feature: The home page shop button
   I want to access the product page
 
   Background:
-    Given I open the url "/"
+    Given I open the home page
 
   Scenario: Test the initial page title
-    Then I expect that the title is "Robot Parts Emporium"
+    Then I expect to be on the home page
 
   Scenario: Test the button functionality
-    When I click on the element ".shop-callout a"
-    Then I expect that the title is "Totally Not Evil Sentient Robot - Robot Parts Emporium"
-    And I expect the url to contain "product-page.html"
+    When I click on the CTA button
+    Then I expect to be on the product page
