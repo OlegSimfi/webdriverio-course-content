@@ -1,24 +1,46 @@
-const { Given, When, Then } = require('cucumber');
-const { expect } = require('chai');
+const { Given, When, Then } = require('cucumber')
+const { expect } = require('chai')
 
 Given('I open the home page', function() {
     browser.url('./');
-});
+})
 
-When ('I click on the CTA button', function () {
+When('I click on the CTA button', function() {
     browser.click('.shop-callout a');
-});
+})
 
-Then ('I expect to be on the home page', function () {
-    var title = browser.getTitle();
-    expect(title).to.equal('Robot Parts Emporium');
-});
+Then(/I expect to be on the (\w+) page/, function(pageName) {
+    var pages = {
+        home: {
+            url: '/',
+            title: 'Robot Parts Emporium'
+        },
+        product: {
+            url: '/product-page.html',
+            title: 'Totally Not Evil Sentient Robot - Robot Parts Emporium'
+        }
+    }
 
-Then ('I expect to be on the product page', function () {
+    var page = pages[pageName];
+
     var productTitle = browser.getTitle();
-    expect(productTitle).to.equal('Totally Not Evil Sentient Robot - Robot Parts Emporium');
+    expect(productTitle).to.equal(page.title);
 
     var url = browser.getUrl();
+    expect(url).to.include(page.url, 'URL mismatch');
+})
 
-    expect(url).to.include('product-page.html', 'URL mismatch');
-});
+
+// Then ('I expect to be on the home page', function () {
+//     var title = browser.getTitle();
+//     expect(title).to.equal('Robot Parts Emporium');
+// });
+
+// Then ('I expect to be on the product page', function () {
+//     var productTitle = browser.getTitle();
+//     expect(productTitle).to.equal('Totally Not Evil Sentient Robot - Robot Parts Emporium');
+//
+//     var url = browser.getUrl();
+//
+//     expect(url).to.include('product-page.html', 'URL mismatch');
+// });
