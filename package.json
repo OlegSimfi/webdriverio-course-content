@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server sample-site -p 8303",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "wdio",
+    "test:watch": "onchange 'sample-site/**/*.[css,js,html]' 'test/**/*.js' -- wdio",
     "test-start": "./node_modules/.bin/wdio",
-    "test-single": "npm run test-start -- --spec=test/review.js"
+    "test-single": "npm run test-start -- --spec=test/shop-button.js"
   },
   "repository": {
     "type": "git",
@@ -20,17 +21,30 @@
   },
   "homepage": "https://github.com/klamping/webdriverio-course-content#readme",
   "dependencies": {
-    "chai": "^4.1.2",
-    "http-server": "^0.9.0"
+
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "node-notifier": "^5.2.1",
-    "onchange": "^3.3.0",
-    "selenium-standalone": "^6.13.0",
-    "sync-request": "^6.0.0",
-    "wdio-mocha-framework": "^0.5.13",
-    "wdio-selenium-standalone-service": "0.0.10",
-    "webdriverio": "^4.12.0"
+    "babel-core": "~6.26.3",
+    "babel-jest": "~23.0.1",
+    "babel-polyfill": "~6.26.0",
+    "babel-preset-env": "~1.7.0",
+    "babel-register": "~6.26.0",
+    "http-server": "^0.9.0",
+    "wdio-cucumber-framework": "1.0.2",
+    "chai": "^3.5.0",
+    "node-notifier": "^4.6.1",
+    "onchange": "^3.2.0",
+    "selenium-standalone": "^6.15.4",
+    "sync-request": "^3.0.1",
+    "wdio-allure-reporter": "^0.1.2",
+    "wdio-browserstack-service": "^0.1.4",
+    "wdio-dot-reporter": "0.0.5",
+    "wdio-junit-reporter": "^0.3.0",
+    "wdio-mocha-framework": "^0.5.8",
+    "wdio-sauce-service": "^0.3.1",
+    "wdio-selenium-standalone-service": "0.0.11",
+    "wdio-teamcity-reporter": "^1.1.1",
+    "wdio-testingbot-service": "^0.1.7",
+    "webdriverio": "^4.14.0"
   }
 }
